@@ -75,7 +75,6 @@ public class TccTransactionFilter implements Filter {
 
         if (Objects.nonNull(tcc)) {
             try {
-
                 final TccTransactionContext tccTransactionContext =
                         TransactionContextLocal.getInstance().get();
                 if (Objects.nonNull(tccTransactionContext)) {

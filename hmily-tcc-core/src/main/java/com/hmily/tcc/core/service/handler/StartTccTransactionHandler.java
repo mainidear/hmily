@@ -73,7 +73,7 @@ public class StartTccTransactionHandler implements TccTransactionHandler {
 
                 throw throwable;
             }
-            //try成功执行confirm confirm 失败的话，那就只能走本地补偿
+            //try成功执行,confirm confirm 失败的话，那就只能走本地补偿
             tccTransactionManager.confirm(tccTransactionManager.getCurrentTransaction());
         } finally {
             tccTransactionManager.remove();

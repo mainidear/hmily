@@ -61,7 +61,7 @@ public class CoordinatorServiceImpl implements CoordinatorService {
                 .getBean(CoordinatorRepository.class);
         //初始化spi 协调资源存储
         coordinatorRepository.init(repositorySuffix, tccConfig);
-
+        //定时执行补偿
         new ScheduledService(tccConfig, coordinatorRepository).scheduledRollBack();
 
     }
