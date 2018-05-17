@@ -1,14 +1,14 @@
 server:
   port: 8085
   contextPath: /
-  address: 0.0.0.0
+  address: localhost
 
 spring:
     datasource:
         driver-class-name:  com.mysql.jdbc.Driver
-        url: jdbc:mysql://192.168.1.68:3306/tcc_account?useUnicode=true&characterEncoding=utf8
-        username: xiaoyu
-        password: Wgj@555888
+        url: jdbc:mysql://localhost:3306/tcc_account?useUnicode=true&characterEncoding=utf8
+        username: root
+        password: a123123
 
 hmily:
     tcc :
@@ -20,12 +20,12 @@ hmily:
         repositorySupport : db
         tccDbConfig :
                  driverClassName  : com.mysql.jdbc.Driver
-                 url :  jdbc:mysql://192.168.1.68:3306/tcc?useUnicode=true&amp;characterEncoding=utf8
-                 username : xiaoyu
-                 password : Wgj@555888
+                 url :  jdbc:mysql://localhost:3306/tcc?useUnicode=true&amp;characterEncoding=utf8
+                 username : root
+                 password : a123123
 
        # repositorySupport : redis
-       #         hostName  : 192.168.1.68
+       #         hostName  : localhost
        #         port      :  6379
        #         password  :
 
@@ -36,9 +36,9 @@ hmily:
        #         rootPath  : /tcc
 
        # repositorySupport : mongodb
-       #       mongoDbUrl  : 192.168.1.68:27017
+       #       mongoDbUrl  : localhost:27017
        #       mongoDbName  :  happylife
-       #       mongoUserName  : xiaoyu
+       #       mongoUserName  : root
        #       mongoUserPwd   : 123456
 
        # repositorySupport : file
